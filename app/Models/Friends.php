@@ -10,4 +10,9 @@ class Friends extends Model
 {
     use HasFactory;
     protected $guarded = ['nama'];
+
+    public function groups()
+    {
+        return $this->belongsTo('App\Models\Groups');
+    }
 }
